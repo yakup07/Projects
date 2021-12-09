@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    
+
+</head>
+<body>
+    <!--This is the initial search script where everything gets set intially-->
+    <script>
+        //api url
+        const api_url = "http://localhost:3000/cars";
+        //async function in order to get the data
+        async function getapi(url){
+            
+            try{
+                const response = await fetch(url);
+                const data = await response.json();
+                show(data);
+            }
+            catch (error){
+                console.log(error);
+            }
+        }
+
+        getapi(api_url);
+
+        //show data within cards
+        function show(data){
+            let  placeholder = document.getElementById('placeholder');
+            let a, b = 0, d=100000000000;
+            //console.log(data);
+            
+            //this is to make a new card for each result within the api
+            //needs to be changed once we have the new api//
+            for(let i=0; i < data.length; i++){
+                let car = data[i];
+                console.log(car.img)
+                placeholder.innerHTML += 
+                `
+                <div class="col tagged" id="newCard">
+                    <div class="card" style="width: 18rem;">
+                        <img src="${car.img}" width="1200" height="200" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${car.brand} ${car.carname}</h5>
+                            <p class="card-text">
+                                <b class="brand" id="brand}">${car.brand}</b>
+                                <br>
+                                <b>Type:</b>
+                                <b class="typecar" id="type">${car.type}</b>
+                                <br>
+                                <b>Buildyear:</b>
+                                <b class="buildyear" id="BY">${car.buildyear}</b>
+                                <br>
+                                <b>HP:</b>
+                                <b class="hp" id="HP">${car.hp}</b>
+                                <br>
+                                <b>Price:</b>
+                                <b class="PC" id="PC">${car.price}€</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                `
+                //future price check for slider
+                //console.log(Math.max(result.location.postcode))
+                a = car.price;
+                if(!isNaN(a)){
+                    if(a>b){
+                        b=a;
+                    }
+                    if(a<d){
+                        d=a;
+                    }
+                }
+            }
+            //this is to set the min, max and current value to their number
+            document.getElementById("priceRange").min = d;
+            document.getElementById("priceRange").max = b;
+            document.getElementById("priceRange").value = b;
+            document.getElementById("pricemin").value = d;
+            document.getElementById("pricemax").value = b;
+            
+        }
+        
+        //search function that looks for any letter/combination that has been inputted
+        //also for price
+        //almost for brand
+        function searchfilter(){
+            let input,inputPrice, filter, a, b, c, d, i, txtvalue, cards, divcol, pricevalue, brand, brandvalue, cartype, typevalue;
+            inputPrice = document.getElementById("priceRange");
+            input = document.getElementById("inputsearch");
+            filter = input.value.toUpperCase(); 
+            divcol = document.getElementById("placeholder");
+            cards = divcol.getElementsByClassName("tagged");
+
+            //get the brand for filter
+            brand = document.getElementById("brandselect").value;
+
+            //get the type for filter
+            cartype = document.getElementById("typeselect").value;
+            
+            //this will update the price selected by the user
+            document.getElementById("curPrice").value = inputPrice.value;
+
+            //turns on or off what needs to be visible/invisible
+            for(i=0; i < cards.length; i++){
+
+                //this is to get the text out in order to compare
+                a = cards[i].getElementsByTagName("h5")[0];
+                txtvalue = a.textContent || a.innerText;
+
+                //this is to get the pricevalue out and convert it to a number
+                b = cards[i].getElementsByClassName("PC")[0];
+                
+                //getting the brand
+                c = cards[i].getElementsByClassName("brand")[0];
+                brandvalue = c.textContent || c.innerText;
+                
+                //getting the type
+                d = cards[i].getElementsByClassName("typecar")[0];
+                typevalue = d.textContent || c.innerText;
+
+                pricevalue = parseInt(b.textContent) || parseInt(b.innerText);
+                
+                if(txtvalue.toUpperCase().indexOf(filter) > -1 && pricevalue <= inputPrice.value){
+                    if(isNaN(pricevalue)){
+                        cards[i].style.display = "";
+                    }
+                    cards[i].style.display = "";
+
+                    if(brandvalue == brand || brand == "All" && typevalue == cartype){
+                        cards[i].style.display = "";
+                    }
+                    //if the filter brand and card brand aren't the same and the filter isn't all do this
+                    if(brandvalue != brand && brand != "All"){
+                        //checks if it is showing on screen
+                        if(window.getComputedStyle(cards[i]).display != "none"){
+                            cards[i].style.display = "none";
+                        }
+                    }
+                    //if the filter brand and card brand the same and the filter isn't all aren't do this
+                    if(typevalue != cartype && cartype != "All"){
+                        //checks if it is showing on screen
+                        if(window.getComputedStyle(cards[i]).display != "none"){
+                            cards[i].style.display = "none";
+                        }
+                    }
+                    
+                }
+                else{
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+        
+        //async function in order to get the data
+        async function getapisort(url){
+            //checks if checkbox is on
+            if(document.getElementById("az").checked){
+                try{
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    sortcardmake(data);
+                }
+                catch (error){
+                    console.log(error);
+                }
+            }
+
+            else{
+                try{
+                    //this needs it's api link changed out once we got/made one
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    del();
+                    show(data);
+                }
+                catch (error){
+                    console.log(error);
+                }
+            }            
+        }
+        
+        //this is to sort on carname
+        //might need some tag changes
+        function sortcardmake(data){
+            const sortedObj =  _.sortBy(data, 'carname');
+            
+            del();
+            //after for call up show with the sortedObj as data for new cards
+            //this way we don't need to make another creation
+            show(sortedObj);
+        }
+
+        //this is to delete the existing cards in order to get new sorting positions
+        function  del(){
+            let cardamount = document.getElementsByClassName("tagged");
+            //for all the current cards there are of the cars DELETE THEM out of the html            
+            for(i=cardamount.length -1; i >= 0; i--){               
+                cardamount[i].remove();
+            }
+        }
+
+    </script>
+
+    <!-- search field -->
+    <div>
+        <input type="text" id="inputsearch" onkeyup="searchfilter()">
+        Min
+        <output id="pricemin"></output>
+        <input type="range" id="priceRange" min="0" max="0" oninput="searchfilter()">
+        Max
+        <output id="pricemax">0</output>
+        <br>
+        <output id="curPrice">0</output>
+        <br>
+        <select id="brandselect" oninput="searchfilter()">
+            <option value="All">All</option>
+            <option value="Tesla">Tesla</option>
+            <option value="BMW">BMW</option>
+            <option value="Volkswagen">Volkswagen</option>
+        </select>
+        <select id="typeselect" oninput="searchfilter()">
+            <option value="All">All</option>
+            <option value="SUV">SUV</option>
+            <option value="Sport">Sport</option>
+            <option value="Sedan">Sedan</option>
+            <option value="Compact">Compact</option>
+            <option value="Minivan">Minivan</option>
+            <option value="Hatchback">Hatchback</option>
+        </select>
+        
+        <br>
+        
+        <input type="checkbox" id="az" onclick="getapisort(api_url)"> alphabetic order
+    </div>
+
+    <!-- This is where the data goes to and spawns into cards -->
+    <div class="container">
+        <div class="row" id="placeholder">
+            <!-- Ready to receive the async juice -->
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+ <!-- Merk model bouwjaar prijs Type Pk -->

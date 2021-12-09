@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.HighScoreController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+        <TextArea fx:id="textArea" editable="false" layoutX="21.0" layoutY="51.0" prefHeight="302.0" prefWidth="547.0"/>
+        <Button layoutX="269.0" layoutY="364.0" mnemonicParsing="false" onAction="#onBackBtnClick" text="Back"/>
+        <Label layoutX="23.0" layoutY="17.0" text="Instructions">
+            <font>
+                <Font name="System Bold" size="14.0"/>
+            </font>
+        </Label>
+    </children>
+
+</AnchorPane>

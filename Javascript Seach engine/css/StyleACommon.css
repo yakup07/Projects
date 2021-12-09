@@ -1,0 +1,170 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+/* Starting below, stylesheet for the standard header bar that appears on most pages rightnow.
+    this includes the logo and the navigation menu, with highlights on navigation buttons. */
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#ffffff;
+    padding-top: 10px;
+    min-height: 80px;
+    border-bottom: green 2px solid;
+                /* background-color: a nice gradient background also fits */
+}
+header a {
+    color: #ffffff;  /* or change it to black on a pale background */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+}
+header li {
+    float: center;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+header #branding {
+    float: left;
+}
+header #branding h1 {
+    margin: 0;
+}
+header nav {
+    float: right;
+    margin-top: 10px;
+    margin-right: 15%; /* should center the links nicely on the index, at least */
+}
+header .highlight, header .current a {
+    color: red;
+                /* font-weight: bold; (disabled) */
+}
+header a:hover {
+    color: darkgreen;  /* darkgray is nice too. */
+    font-weight: bold;
+    text-shadow: black 2px 2px;
+}
+/* end of stylesheet for the header bar */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background: rgb(8,66,51);
+    background: linear-gradient(90deg, rgba(8,66,51,0.7917367630646008) 0%, rgba(46,66,52,1) 100%);
+}
+footer {
+    padding-bottom: 25px;
+    padding-top: 10px;
+    margin-top: 120px;
+    color: #ffffff;
+    background-color: gray;
+    text-align: center;
+    opacity: 65%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-height: 20px;
+    float: left;
+}
+
+/* below: stylesheet for the central car search box on the main page - placed here in case it needs to appear on multiple pages. */
+
+.carSearchBox {
+    /* the box containing the actual car search menu with its dropdown menus (...) modify as desired. */
+    border-style: double;
+    border-color: red;
+    border-width: 5px;
+    /* background-color: silver; */
+    background: radial-gradient(circle, rgba(177,177,177,1) 18%, rgba(124,142,138,1) 100%);
+    color: black;
+    width: 300px;   /* was formerly 530 */
+    height: 650px;  /* was formerly 650 or 750*/
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    /* right margin expansion may be temporary */
+    margin-left: 8%;
+}
+@media screen and ( max-width: 600px ){
+    .carSearchBox {
+        margin: 50px 0 50px 65px;
+    }
+}
+.carSearchCriteria {
+    /* the combined element of the dropdown selection inputs + their labels above them */
+    width: 250px;  /* 250 lines them up on the left, 230 lines them up neatly in lines of 2 */
+    height: 50px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    float: left;
+    color: midnightblue;
+}
+.carSearchDropdowns {
+    /* the dropdown menus allowing the user to select their car search criteria from a list (?) */
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+.carTextSearch {
+    /* The text input search, seperate from the other search funtions */
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    float: left;
+    color: midnightblue;
+}
+.priceRangeBox {
+    /* contains the price range slider & outputs */
+    line-height: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
+    float: left;
+    color: midnightblue;
+}
+
+/* positioning for the search result cards */
+.resultCardBox {
+    float: left;
+    /* background-color: silver; */
+    background: radial-gradient(circle, rgba(177,177,177,1) 18%, rgba(124,142,138,1) 100%);
+    border-style: double;
+    border-color: red;
+    border-width: 5px;
+    width: 85%;
+    height: 80%;
+    min-height: 0px;   /* may or may not want to increase it */
+    margin-top: 0px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 100px;
+    margin-left: 5%;
+    min-width: 400px;
+}
+.placeHolder {
+    position: absolute;
+}

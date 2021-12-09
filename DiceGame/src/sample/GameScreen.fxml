@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="711.0" prefWidth="921.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.GameScreenController">
+   <children>
+
+      <Pane layoutX="12.0" layoutY="7.0" prefHeight="51.0" prefWidth="48.0" style="-fx-border-width: 2px; -fx-border-color: white; -fx-border-insets: -2px; -fx-border-radius: 10px;">
+         <children>
+            <Button fx:id="selectionBtn1" layoutX="7.0" layoutY="8.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="72.0" prefHeight="51.0" prefWidth="48.0" style="-fx-border-width: 2px; -fx-border-color: white; -fx-border-insets: -2px; -fx-border-radius: 10px;">
+         <children>
+            <Button fx:id="selectionBtn2" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="16.0" layoutY="138.0" prefHeight="51.0" prefWidth="48.0" style="-fx-border-width: 2px; -fx-border-color: white; -fx-border-insets: -2px; -fx-border-radius: 10px;">
+         <children>
+            <Button fx:id="selectionBtn3" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" />
+         </children>
+      </Pane>
+       
+      <Pane layoutX="20.0" layoutY="201.0" prefHeight="200.0" prefWidth="268.0" style="-fx-border-width: 2px; -fx-border-color: yellow; -fx-border-insets: -2px; -fx-border-radius: 20px; -fx-background-color: F0E68C; -fx-background-radius: 20px;">
+         <children>
+            <Button fx:id="nBtnY2" layoutX="59.0" layoutY="17.0" mnemonicParsing="false" onAction="#onYBtn2Click" prefHeight="25.0" prefWidth="35.0" text="3" />
+            <Button fx:id="nBtnY3" layoutX="107.0" layoutY="17.0" mnemonicParsing="false" onAction="#onYBtn3Click" prefHeight="25.0" prefWidth="35.0" text="5" />
+            <Button fx:id="nBtnY1" layoutX="11.0" layoutY="17.0" mnemonicParsing="false" onAction="#onYBtn1Click" prefHeight="25.0" prefWidth="35.0" text="2" />
+            <Button layoutX="156.0" layoutY="17.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" text="X">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button layoutX="222.0" layoutY="17.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: blue;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button fx:id="nBtnY5" layoutX="60.0" layoutY="54.0" mnemonicParsing="false" onAction="#onYBtn5Click" prefHeight="25.0" prefWidth="35.0" text="6" />
+            <Button layoutX="108.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" text="X">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="nBtnY4" layoutX="12.0" layoutY="54.0" mnemonicParsing="false" onAction="#onYBtn4Click" prefHeight="25.0" prefWidth="35.0" text="1" />
+            <Button fx:id="nBtnY6" layoutX="157.0" layoutY="54.0" mnemonicParsing="false" onAction="#onYBtn6Click" prefHeight="25.0" prefWidth="35.0" text="1" />
+            <Button layoutX="59.0" layoutY="90.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" text="X">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="nBtnY8" layoutX="107.0" layoutY="90.0" mnemonicParsing="false" onAction="#onYBtn8Click" prefHeight="25.0" prefWidth="35.0" text="3" />
+            <Button fx:id="nBtnY7" layoutX="11.0" layoutY="90.0" mnemonicParsing="false" onAction="#onYBtn7Click" prefHeight="25.0" prefWidth="35.0" text="3" />
+            <Button fx:id="nBtnY9" layoutX="156.0" layoutY="91.0" mnemonicParsing="false" onAction="#onYBtn9Click" prefHeight="25.0" prefWidth="35.0" text="5" />
+            <Button fx:id="nBtnY10" layoutX="60.0" layoutY="126.0" mnemonicParsing="false" onAction="#onYBtn10Click" prefHeight="25.0" prefWidth="35.0" text="2" />
+            <Button fx:id="nBtnY11" layoutX="108.0" layoutY="126.0" mnemonicParsing="false" onAction="#onYBtn11Click" prefHeight="25.0" prefWidth="35.0" text="4" />
+            <Button layoutX="12.0" layoutY="126.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" text="X">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Button fx:id="nBtnY12" layoutX="157.0" layoutY="126.0" mnemonicParsing="false" onAction="#onYBtn12Click" prefHeight="25.0" prefWidth="35.0" text="6" />
+            <Button layoutX="223.0" layoutY="129.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: red;" text="Fox" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+            <Button layoutX="222.0" layoutY="53.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: orange;" text="4">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="223.0" layoutY="91.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Green;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="224.0" layoutY="167.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: black;" text="+1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="11.0" layoutY="167.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: yellow; -fx-border-color: black;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="10" />
+            <Button layoutX="58.0" layoutY="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: yellow; -fx-border-color: black;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="14" />
+            <Button layoutX="108.0" layoutY="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: yellow; -fx-border-color: black;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="16" />
+            <Button layoutX="157.0" layoutY="168.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: yellow; -fx-border-color: black;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="20" />
+         </children>
+      </Pane>
+      <Pane layoutX="339.0" layoutY="202.0" prefHeight="200.0" prefWidth="268.0" style="-fx-border-width: 2px; -fx-border-color: blue; -fx-border-insets: -2px; -fx-border-radius: 20px; -fx-background-color: ADD8E6; -fx-background-radius: 20px;">
+         <children>
+            <Button fx:id="nBtnB1" layoutX="60.0" layoutY="47.0" mnemonicParsing="false" onAction="#onBBtn1Click" prefHeight="25.0" prefWidth="35.0" text="2" />
+            <Button fx:id="nBtnB2" layoutX="108.0" layoutY="47.0" mnemonicParsing="false" onAction="#onBBtn2Click" prefHeight="25.0" prefWidth="35.0" text="3" />
+            <Button fx:id="nBtnB3" layoutX="157.0" layoutY="47.0" mnemonicParsing="false" onAction="#onBBtn3Click" prefHeight="25.0" prefWidth="35.0" text="4" />
+            <Button fx:id="nBtnB5" layoutX="59.0" layoutY="83.0" mnemonicParsing="false" onAction="#onBBtn5Click" prefHeight="25.0" prefWidth="35.0" text="6" />
+            <Button fx:id="nBtnB6" layoutX="107.0" layoutY="83.0" mnemonicParsing="false" onAction="#onBBtn6Click" prefHeight="25.0" prefWidth="35.0" text="7" />
+            <Button fx:id="nBtnB4" layoutX="11.0" layoutY="83.0" mnemonicParsing="false" onAction="#onBBtn4Click" prefHeight="25.0" prefWidth="35.0" text="5" />
+            <Button fx:id="nBtnB7" layoutX="156.0" layoutY="84.0" mnemonicParsing="false" onAction="#onBBtn7Click" prefHeight="25.0" prefWidth="35.0" text="8" />
+            <Button fx:id="nBtnB9" layoutX="60.0" layoutY="119.0" mnemonicParsing="false" onAction="#onBBtn9Click" prefHeight="25.0" prefWidth="35.0" text="10" />
+            <Button fx:id="nBtnB10" layoutX="108.0" layoutY="119.0" mnemonicParsing="false" onAction="#onBBtn10Click" prefHeight="25.0" prefWidth="35.0" text="11" />
+            <Button fx:id="nBtnB8" layoutX="12.0" layoutY="119.0" mnemonicParsing="false" onAction="#onBBtn8Click" prefHeight="25.0" prefWidth="35.0" text="9" />
+            <Button fx:id="nBtnB11" layoutX="157.0" layoutY="119.0" mnemonicParsing="false" onAction="#onBBtn11Click" prefHeight="25.0" prefWidth="35.0" text="12" />
+            <Button layoutX="223.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: red;" text="Fox" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+            <Button layoutX="222.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Orange;" text="5">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="223.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: yellow;" text="X">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="61.0" layoutY="164.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Green;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="109.0" layoutY="164.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Purple;" text="6" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="6.0" layoutY="164.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" style="-fx-background-color: black;" text="Re-Roll" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font></Button>
+            <Button layoutX="158.0" layoutY="165.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: black;" text="+1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="12.0" layoutY="48.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="10.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Label layoutX="27.0" layoutY="50.0" text="+">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="36.0" layoutY="49.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="10.0" style="-fx-background-color: white; -fx-border-color: black;" styleClass="stylishButton" stylesheets="@btnStyle.css">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+            <Separator layoutX="5.0" layoutY="35.0" prefHeight="3.0" prefWidth="257.0" style="-fx-background-color: blue;" />
+            <Label layoutX="13.0" layoutY="17.0" text="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="17.0" text="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="17.0" text="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="17.0" text="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="17.0" text="5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="133.0" layoutY="17.0" text="6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="154.0" layoutY="17.0" text="7">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="178.0" layoutY="17.0" text="8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="17.0" text="9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="220.0" layoutY="17.0" text="10">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="246.0" layoutY="17.0" text="11">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button layoutX="6.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="10.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="1" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="28.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="10.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="2" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="96.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="11" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="120.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="16" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="167.0" layoutY="-12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="29" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="189.0" layoutY="-12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="37" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="18.0" layoutY="419.0" prefHeight="77.0" prefWidth="594.0" style="-fx-border-color: green; -fx-border-radius: 20px; -fx-border-width: 2; -fx-background-color: C1E1C1; -fx-background-radius: 20px;">
+         <children>
+            <Button layoutX="12.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: green; -fx-border-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="=&gt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="conBtnG2" layoutX="114.0" layoutY="23.0" mnemonicParsing="false" onAction="#onConBtn2Click" prefHeight="25.0" prefWidth="35.0" text="&gt;2" />
+            <Button fx:id="conBtnG3" layoutX="162.0" layoutY="23.0" mnemonicParsing="false" onAction="#onConBtn3Click" prefHeight="25.0" prefWidth="35.0" text="&gt;3" />
+            <Button fx:id="conBtnG1" layoutX="66.0" layoutY="23.0" mnemonicParsing="false" onAction="#onConBtn1Click" prefHeight="25.0" prefWidth="35.0" text="&gt;1" />
+            <Button fx:id="conBtnG4" layoutX="211.0" layoutY="23.0" mnemonicParsing="false" onAction="#onConBtn4Click" prefHeight="25.0" prefWidth="35.0" text="&gt;4" />
+            <Button fx:id="conBtnG6" layoutX="306.0" layoutY="24.0" mnemonicParsing="false" onAction="#onConBtn6Click" prefHeight="25.0" prefWidth="35.0" text="&gt;1" />
+            <Button fx:id="conBtnG7" layoutX="354.0" layoutY="24.0" mnemonicParsing="false" onAction="#onConBtn7Click" prefHeight="25.0" prefWidth="35.0" text="&gt;2" />
+            <Button fx:id="conBtnG5" layoutX="258.0" layoutY="24.0" mnemonicParsing="false" onAction="#onConBtn5Click" prefHeight="25.0" prefWidth="35.0" text="&gt;5" />
+            <Button fx:id="conBtnG8" layoutX="403.0" layoutY="24.0" mnemonicParsing="false" onAction="#onConBtn8Click" prefHeight="25.0" prefWidth="35.0" text="&gt;3" />
+            <Button fx:id="conBtnG10" layoutX="498.0" layoutY="26.0" mnemonicParsing="false" onAction="#onConBtn10Click" prefHeight="25.0" prefWidth="35.0" text="&gt;5" />
+            <Button fx:id="conBtnG11" layoutX="546.0" layoutY="26.0" mnemonicParsing="false" onAction="#onConBtn11Click" prefHeight="25.0" prefWidth="35.0" text="&gt;6" />
+            <Button fx:id="conBtnG9" layoutX="450.0" layoutY="26.0" mnemonicParsing="false" onAction="#onConBtn9Click" prefHeight="25.0" prefWidth="35.0" text="&gt;4" />
+            <Button layoutX="257.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="15" textFill="WHITE" />
+            <Button layoutX="304.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="21" textFill="WHITE" />
+            <Button layoutX="354.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="28" textFill="WHITE" />
+            <Button layoutX="403.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="36" textFill="WHITE" />
+            <Button layoutX="451.0" layoutY="-13.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="45" textFill="WHITE" />
+            <Button layoutX="499.0" layoutY="-12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="55" textFill="WHITE" />
+            <Button layoutX="545.0" layoutY="-12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="66" textFill="WHITE" />
+            <Button layoutX="214.0" layoutY="47.0" mnemonicParsing="false" prefHeight="12.0" prefWidth="30.0" style="-fx-background-color: black;" text="+1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="309.0" layoutY="47.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: blue;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="453.0" layoutY="48.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: Purple;" text="6" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="493.0" layoutY="49.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="48.0" style="-fx-background-color: black;" text="Re-Roll" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+            <Button layoutX="357.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: red;" text="Fox" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="18.0" layoutY="507.0" prefHeight="77.0" prefWidth="594.0" style="-fx-border-color: orange; -fx-border-radius: 20px; -fx-border-width: 2; -fx-background-color: FEA200; -fx-background-radius: 20px;">
+         <children>
+            <Button layoutX="12.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: orange; -fx-border-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="=&gt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="nBtnO2" layoutX="114.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnO2Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnO3" layoutX="162.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnO3Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnO1" layoutX="66.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnO1Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnO4" layoutX="211.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnO4Click" prefHeight="25.0" prefWidth="35.0" text="x2" />
+            <Button fx:id="nBtnO6" layoutX="306.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnO6Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnO7" layoutX="354.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnO7Click" prefHeight="25.0" prefWidth="35.0" text="x2" />
+            <Button fx:id="nBtnO5" layoutX="258.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnO5Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnO8" layoutX="403.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnO8Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnO10" layoutX="498.0" layoutY="26.0" mnemonicParsing="false" onAction="#onNBtnO10Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnO11" layoutX="546.0" layoutY="26.0" mnemonicParsing="false" onAction="#onNBtnO11Click" prefHeight="25.0" prefWidth="35.0" text="x3" />
+            <Button fx:id="nBtnO9" layoutX="450.0" layoutY="26.0" mnemonicParsing="false" onAction="#onNBtnO9Click" prefHeight="25.0" prefWidth="35.0" text="x2" />
+            <Button layoutX="308.0" layoutY="48.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: black;" text="+1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="500.0" layoutY="48.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: Purple;" text="6" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="260.0" layoutY="47.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: yellow;" text="X">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="406.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: red;" text="Fox" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+            <Button layoutX="157.0" layoutY="48.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="48.0" style="-fx-background-color: black;" text="Re-Roll" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="595.0" prefHeight="77.0" prefWidth="594.0" style="-fx-border-color: purple; -fx-border-radius: 20px; -fx-border-width: 2; -fx-background-color: FF80EE; -fx-background-radius: 20px;">
+         <children>
+            <Button layoutX="12.0" layoutY="20.0" mnemonicParsing="false" style="-fx-background-color: purple; -fx-border-color: white; -fx-background-radius: 10px; -fx-border-radius: 10px;" text="=&gt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="nBtnP2" layoutX="114.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnP2Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP3" layoutX="162.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnP3Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP1" layoutX="66.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnP1Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP4" layoutX="211.0" layoutY="23.0" mnemonicParsing="false" onAction="#onNBtnP4Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP6" layoutX="306.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnP6Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP7" layoutX="354.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnP7Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP5" layoutX="258.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnP5Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP8" layoutX="403.0" layoutY="24.0" mnemonicParsing="false" onAction="#onNBtnP8Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP10" layoutX="498.0" layoutY="26.0" mnemonicParsing="false" onAction="#onNBtnP10Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP11" layoutX="546.0" layoutY="26.0" mnemonicParsing="false" onAction="#onNBtnP11Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button fx:id="nBtnP9" layoutX="450.0" layoutY="26.0" mnemonicParsing="false" onAction="#onNBtnP9Click" prefHeight="25.0" prefWidth="35.0" />
+            <Button layoutX="452.0" layoutY="49.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: Green;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="308.0" layoutY="47.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: yellow;" text="X">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="261.0" layoutY="47.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: black;" text="+1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="214.0" layoutY="48.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: blue;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Label layoutX="100.0" layoutY="21.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="148.0" layoutY="20.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="195.0" layoutY="21.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="244.0" layoutY="21.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="291.0" layoutY="22.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="339.0" layoutY="21.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="387.0" layoutY="21.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="435.0" layoutY="23.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="483.0" layoutY="23.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="531.0" layoutY="24.0" text="&lt;" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button layoutX="501.0" layoutY="47.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: Orange;" text="6">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+            <Button layoutX="157.0" layoutY="48.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="48.0" style="-fx-background-color: black;" text="Re-Roll" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+            <Button layoutX="357.0" layoutY="46.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: red;" text="Fox" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+            <Button layoutX="549.0" layoutY="49.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: black;" text="+1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="397.0" layoutY="48.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="48.0" style="-fx-background-color: black;" text="Re-Roll" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="83.0" layoutY="406.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="1" textFill="WHITE" />
+      <Button layoutX="130.0" layoutY="406.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="3" textFill="WHITE" />
+      <Button layoutX="179.0" layoutY="406.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="6" textFill="WHITE" />
+      <Button layoutX="228.0" layoutY="406.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: green; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="10" textFill="WHITE" />
+      <Pane layoutX="101.0" layoutY="138.0" prefHeight="51.0" prefWidth="507.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-background-color: black;">
+         <children>
+            <Button layoutX="15.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;" text="+1" textFill="WHITE" />
+            <Button fx:id="infoBtnY" layoutX="79.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="206.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="271.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="333.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="393.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="453.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+         </children>
+      </Pane>
+      <Pane layoutX="100.0" layoutY="75.0" prefHeight="51.0" prefWidth="507.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 20px; -fx-background-radius: 20px; -fx-background-color: black;">
+         <children>
+            <Button layoutX="9.0" layoutY="12.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="63.0" style="-fx-background-color: black; -fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;" text="Re-Roll" textFill="WHITE" />
+            <Button layoutX="79.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="140.0" layoutY="11.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="206.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="271.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="333.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="393.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+            <Button layoutX="453.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-border-color: white; -fx-border-width: 4px; -fx-border-radius: 20px; -fx-background-radius: 20px;" />
+         </children>
+      </Pane>
+      <Pane layoutX="109.0" layoutY="7.0" prefHeight="61.0" prefWidth="48.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="35.0" text="1" />
+            <Button layoutX="6.0" layoutY="35.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="35.0" text="R-roll">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="194.0" layoutY="7.0" prefHeight="61.0" prefWidth="48.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="35.0" text="2" />
+            <Button layoutX="9.0" layoutY="32.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="30.0" text="+1">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="280.0" layoutY="7.0" prefHeight="61.0" prefWidth="48.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="35.0" text="3" />
+            <Button layoutX="7.0" layoutY="36.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="35.0" text="R-roll">
+               <font>
+                  <Font size="8.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="369.0" layoutY="5.0" prefHeight="61.0" prefWidth="48.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="35.0" text="4" />
+            <Button layoutX="23.0" layoutY="32.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="15.0" text="6">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button layoutX="3.0" layoutY="32.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="15.0" text="X">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="460.0" layoutY="7.0" prefHeight="61.0" prefWidth="48.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="35.0" text="5" />
+            <Button layoutX="6.0" layoutY="32.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="\$$$">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="547.0" layoutY="7.0" prefHeight="61.0" prefWidth="48.0" style="-fx-border-color: white; -fx-border-width: 2px; -fx-border-radius: 10px;">
+         <children>
+            <Button layoutX="6.0" layoutY="5.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="35.0" text="6" />
+            <Button layoutX="6.0" layoutY="33.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="\$|$$">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutX="391.0" layoutY="189.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="10.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="4" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="414.0" layoutY="189.0" mnemonicParsing="false" prefHeight="3.0" prefWidth="10.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="7" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="483.0" layoutY="190.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="22" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="552.0" layoutY="189.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="46" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="579.0" layoutY="189.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: blue; -fx-border-color: white;" styleClass="stylishButton" stylesheets="@btnStyle.css" text="56" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Separator layoutX="639.0" layoutY="27.0" orientation="VERTICAL" prefHeight="640.0" prefWidth="7.0" />
+      <Pane layoutX="680.0" layoutY="407.0" prefHeight="200.0" prefWidth="217.0" style="-fx-background-color: grey;">
+         <children>
+            <Button fx:id="blueDice" layoutX="31.0" layoutY="55.0" mnemonicParsing="false" onAction="#onBlueDiceClick" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: blue;" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="orangeDice" layoutX="89.0" layoutY="55.0" mnemonicParsing="false" onAction="#onOrangeDiceClick" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: orange;" text="0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="greenDice" layoutX="148.0" layoutY="54.0" mnemonicParsing="false" onAction="#onGreenDiceClick" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Green;" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="31.0" layoutY="14.0" text="Available Dices , Round">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="yellowDice" layoutX="32.0" layoutY="109.0" mnemonicParsing="false" onAction="#onYellowDiceClick" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: yellow;" text="0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="purpleDice" layoutX="89.0" layoutY="109.0" mnemonicParsing="false" onAction="#onPurpleDiceClick" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Purple;" text="0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="whiteDice" layoutX="148.0" layoutY="108.0" mnemonicParsing="false" onAction="#onWhiteDiceClick" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: white;" text="0">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="rollButton" layoutX="67.0" layoutY="162.0" mnemonicParsing="false" onAction="#onRollButtonClick" style="-fx-background-color: black;" text="Roll &amp; write" textFill="WHITE" />
+            <Label fx:id="roundLabel" layoutX="169.0" layoutY="14.0" prefHeight="17.0" prefWidth="6.0" text="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="679.0" layoutY="55.0" prefHeight="229.0" prefWidth="217.0" style="-fx-background-color: white;">
+         <children>
+            <Label layoutX="58.0" layoutY="11.0" prefHeight="17.0" prefWidth="99.0" text="Available Cards">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="blueCardXBtn" layoutX="40.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: blue;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="orangeCard4Btn" layoutX="41.0" layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: orange;" text="4">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="greenCardXBtn" layoutX="41.0" layoutY="116.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Green;" text="X" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="foxCardBtn" layoutX="41.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: red;" text="Fox" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+            </Button>
+            <Button fx:id="plusOneCardBtn" layoutX="154.0" layoutY="40.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: black;" text="+1" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="reRollCardBtn" layoutX="149.0" layoutY="78.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" style="-fx-background-color: black;" text="Re-Roll" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="9.0" />
+               </font>
+            </Button>
+            <Button fx:id="purpleCard6Btn" layoutX="156.0" layoutY="116.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Purple;" text="6" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="orangeCard5Btn" layoutX="156.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: Orange;" text="5">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="yellowCardXBtn" layoutX="41.0" layoutY="191.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: yellow;" text="X">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="orangeCard6Btn" layoutX="158.0" layoutY="191.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="30.0" style="-fx-background-color: Orange;" text="6">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="blueCardXL" layoutX="9.0" layoutY="44.0" text="0" textAlignment="CENTER" />
+            <Label fx:id="orangeCard4L" layoutX="9.0" layoutY="82.0" text="0" />
+            <Label fx:id="greenCardXL" layoutX="9.0" layoutY="120.0" text="0" />
+            <Label fx:id="orangeCard6L" layoutX="120.0" layoutY="196.0" text="0" />
+            <Label fx:id="foxCardL" layoutX="10.0" layoutY="160.0" text="0" />
+            <Label fx:id="orangeCard5L" layoutX="120.0" layoutY="160.0" text="0" />
+            <Label fx:id="plusOneCardL" layoutX="117.0" layoutY="44.0" text="0" />
+            <Label fx:id="purpleCardL" layoutX="119.0" layoutY="119.0" text="0" />
+            <Label fx:id="reRollCardL" layoutX="118.0" layoutY="82.0" text="0" />
+            <Label fx:id="yellowCardXL" layoutX="11.0" layoutY="195.0" text="0" />
+         </children>
+      </Pane>
+      <Button layoutX="822.0" layoutY="653.0" mnemonicParsing="false" style="-fx-background-color: red;" text="Save &amp; Exit" textFill="WHITE" />
+
+   </children>
+</AnchorPane>
